@@ -18,16 +18,17 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <fabric8.generator.name>redhat-clnr/${project.artifactId}:latest</fabric8.generator.name>
         <version.postgresql>9.4.1207</version.postgresql>
+        <version.jcloudevents>0.0.1-SNAPSHOT</version.jcloudevents>
     </properties>
 
-   <modules>
-       <module>ingest-api</module>
-       <module>persist-to-db</module>
-       <module>customer-stream</module>
-      <module>demand-level-kstream</module>
-      <module>demand-meter</module>
-      <module>customer-profile-kstream</module>
-   </modules>
+    <modules>
+        <module>ingest-api</module>
+        <module>persist-to-db</module>
+        <module>customer-stream</module>
+        <module>demand-level-kstream</module>
+        <module>demand-meter</module>
+        <module>customer-profile-kstream</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
@@ -38,11 +39,11 @@
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
-        <dependency>
-            <groupId>org.aerogear.kafka</groupId>
-            <artifactId>kafka-cdi-extension</artifactId>
-            <version>${kafka-cdi.version}</version>
-        </dependency>
+            <dependency>
+                <groupId>org.aerogear.kafka</groupId>
+                <artifactId>kafka-cdi-extension</artifactId>
+                <version>${kafka-cdi.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
